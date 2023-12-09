@@ -1,6 +1,6 @@
 body {
     background-color: rgb(61, 126, 195);
-    background-image: url("/bg.jpg");
+    background-image: url("bg.jpg");
     background-size: cover;
 }
 
