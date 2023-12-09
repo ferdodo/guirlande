@@ -1,0 +1,13 @@
+<span>
+    <cookies-button @click="handleClick">
+        <span style="font-size: 3rem; font-weight: 900;">
+            <template v-for="id in button.turnsOnLights">
+                <light-indicator-component :id="id" :turns-on="true"></light-indicator-component>
+            </template>
+            
+            <template v-for="id in button.turnsOffLights">
+                <light-indicator-component :id="id" :turns-on="false"></light-indicator-component>
+            </template>
+        </span>
+    </cookies-button>
+</span>

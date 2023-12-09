@@ -1,0 +1,16 @@
+<div style="max-width: 5rem; max-height: 5rem;">
+    <div id = 'box' onclick = lightOff(this) style="scale: 0.15; position: relative; top: -13rem; left: -15rem;">
+        <div class='bulb circle' :class="{[light.color]: true, enlighted: light.isOn}">
+            <div id = 'shine'></div>
+        </div>
+      
+        <div class='bulb trapezoid' :class="{[light.color]: true, enlighted: light.isOn}"></div>
+        <div id = 'bottom1'></div>
+        <div id = 'bottom2'></div>
+        <div id = 'bottom3'></div>
+        <div class="halfCircle bulb" :class="{[light.color]: true, enlighted: light.isOn}"></div>
+        <div class='drop' id = 'left'></div>
+        <div class='drop' id = 'right'></div>
+        <div id='wire'></div>
+    </div>
+</div>

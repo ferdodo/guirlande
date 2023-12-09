@@ -1,0 +1,16 @@
+<div>
+	<cookies-panel>
+		<cookies-h1> Guirlande </cookies-h1>
+
+		<cookies-p> Allumez toutes les lumière. </cookies-p>
+
+		<puzzle-component></puzzle-component>
+
+		<div v-if="win">
+			<cookies-p style="text-align:center">
+				🎁 C'est gagné pour aujourd'hui ! 🎅 <br>
+				<cookies-button @click="share()" title="Copier dans le presse-papier" confetti=""> Partager </cookies-button>
+			</cookies-p>
+		</div>
+	</cookies-panel>
+</div>
