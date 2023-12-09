@@ -1,5 +1,5 @@
-<div>
-	<div style="display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: 1fr">
+<div style="max-width: 45rem;">
+	<div style="display: grid; grid-template-columns: repeat(6, 1fr); grid-template-rows: 1fr;">
 		<template v-for="light in puzzle.lights">
 			<light-component :id="light.id"></light-component>
 		</template>
