@@ -3,6 +3,7 @@ import { render } from "./template";
 import { PuzzleComponent } from "./puzzle-component";
 import { win$ } from "./win";
 import { share } from "./share";
+import { getClickCount } from "./click-count";
 import "cookies-ds";
 
 export const app = createApp({
@@ -18,7 +19,7 @@ export const app = createApp({
 			//@ts-ignore
 			if (value && window.opener?.registerScore) {
 				//@ts-ignore
-				window.opener.registerScore("guirlande", matchCount);
+				window.opener.registerScore("guirlande", getClickCount());
 				window.close();
 			}
 		});
