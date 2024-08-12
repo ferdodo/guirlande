@@ -11,7 +11,18 @@ export const app = createApp({
 	},
 	setup() {
 		const win: Ref<boolean> = ref(false);
-		win$.subscribe(value => win.value = value);
+
+		win$.subscribe(value => {
+			win.value = value
+
+			//@ts-ignore
+			if (value && window.opener?.registerScore) {
+				//@ts-ignore
+				window.opener.registerScore("guirlande", matchCount);
+				window.close();
+			}
+		});
+
 		return { win, share };
 	},
 	render
